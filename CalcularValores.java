@@ -5,16 +5,16 @@ public class CalcularValores {
 
 	public static void main(String[] args) {
 		
-		// Definir uma variável para descobrir o valor total do mês para calcular a média no futuro
+		// Definir uma variÃ¡vel para descobrir o valor total do mÃªs para calcular a mÃ©dia no futuro
 		float valorMensal = 0;
 		
-		// Definir uma variável para descobrir o valor total da semana para calcular a média no futuro
+		// Definir uma variÃ¡vel para descobrir o valor total da semana para calcular a mÃ©dia no futuro
 		float valorSemanal = 0;
 		
-		// Definir uma variável para descobrir quantos dias o mês tem
+		// Definir uma variÃ¡vel para descobrir quantos dias o mÃªs tem
 		int diasDoMes = 0;
 		
-		// OBS: Valores definidos somente a título de testes!
+		// OBS: Valores definidos somente a tÃ­tulo de testes!
 		float[][] valor = new float[4][7];
 		valor[0][0] = 1;
 		valor[0][1] = 1;
@@ -45,7 +45,7 @@ public class CalcularValores {
 		valor[3][5] = 4;
 		valor[3][6] = 4;
 		
-		// Criar uma array para ter aonde jogar as médias semanais a fim de compará-los
+		// Criar uma array para ter aonde jogar as mÃ©dias semanais a fim de comparÃ¡-las
 		float mediasSemanais[] = new float[valor.length];
 		
 		for(int linha = 0; linha <= valor.length -1; linha++) {
@@ -56,28 +56,28 @@ public class CalcularValores {
 			for(int coluna = 0; coluna <= valor[0].length -1; coluna++) {
 				System.out.print(valor[linha][coluna] + " ");
 				
-				// Somar o valor do dia na variável do valor mensal total
+				// Somar o valor do dia na variÃ¡vel do valor mensal total
 				valorMensal += valor[linha][coluna];
 				
-				// Somar o valor do dia na variável do valor semanal
+				// Somar o valor do dia na variÃ¡vel do valor semanal
 				valorSemanal += valor[linha][coluna];
 				
-				// Somar os dias do mês
+				// Somar os dias do mÃªs
 				diasDoMes++;
 			}
 			
 			System.out.print("\n");
 			
-			// Calcular e alocar o valor médio da semana 
+			// Calcular e alocar o valor mÃ©dio da semana 
 			mediasSemanais[linha] = (float) valorSemanal/valor[0].length;
 		}
 		
-		// Calcular o valor médio mensal
+		// Calcular o valor mÃ©dio mensal
 		float mediaMensal = valorMensal/diasDoMes;
 				
 		Arrays.sort(mediasSemanais);
-		System.out.println("Menor média semanal: R$ " + mediasSemanais[0]);
-		System.out.println("Maior média semanal: R$ " + mediasSemanais[mediasSemanais.length -1]);
-		System.out.println("Média mensal: R$ " + mediaMensal);
+		System.out.println("Menor mÃ©dia semanal: R$ " + mediasSemanais[0]);
+		System.out.println("Maior mÃ©dia semanal: R$ " + mediasSemanais[mediasSemanais.length -1]);
+		System.out.println("MÃ©dia mensal: R$ " + mediaMensal);
 	}
 }
