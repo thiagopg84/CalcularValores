@@ -75,7 +75,9 @@ public class CalcularValores {
 		// Calcular o valor médio mensal
 		float mediaMensal = valorMensal/diasDoMes;
 				
+		// Ordenar a array das médias semanais
 		Arrays.sort(mediasSemanais);
+		
 		System.out.println("Menor média semanal: R$ " + mediasSemanais[0]);
 		System.out.println("Maior média semanal: R$ " + mediasSemanais[mediasSemanais.length -1]);
 		System.out.println("Média mensal: R$ " + mediaMensal);
