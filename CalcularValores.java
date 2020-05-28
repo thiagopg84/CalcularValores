@@ -16,35 +16,9 @@ public class CalcularValores {
 		
 		// OBS: Valores definidos somente a título de testes!
 		float[][] valor = new float[4][7];
-		valor[0][0] = 1;
-		valor[0][1] = 1;
-		valor[0][2] = 1;
-		valor[0][3] = 1;
-		valor[0][4] = 1;
-		valor[0][5] = 1;
-		valor[0][6] = 1;
-		valor[1][0] = 2;
-		valor[1][1] = 2;
-		valor[1][2] = 2;
-		valor[1][3] = 2;
-		valor[1][4] = 2;
-		valor[1][5] = 2;
-		valor[1][6] = 2;
-		valor[2][0] = 3;
-		valor[2][1] = 3;
-		valor[2][2] = 3;
-		valor[2][3] = 3;
-		valor[2][4] = 3;
-		valor[2][5] = 3;
-		valor[2][6] = 3;
-		valor[3][0] = 4;
-		valor[3][1] = 4;
-		valor[3][2] = 4;
-		valor[3][3] = 4;
-		valor[3][4] = 4;
-		valor[3][5] = 4;
-		valor[3][6] = 4;
-		
+
+		Scanner keyboard = new Scanner(System.in);
+
 		// Criar uma array para ter aonde jogar as médias semanais a fim de compará-las
 		float mediasSemanais[] = new float[valor.length];
 		
@@ -52,9 +26,12 @@ public class CalcularValores {
 			
 			// Zerar o valor total da semana
 			valorSemanal = 0;
-			
+
 			for(int coluna = 0; coluna <= valor[0].length -1; coluna++) {
+				
 				System.out.print(valor[linha][coluna] + " ");
+				System.out.print("Digite o valor do dia " + (diasDoMes +1) + ": ");
+				valor[linha][coluna] = keyboard.nextFloat();
 				
 				// Somar o valor do dia na variável do valor mensal total
 				valorMensal += valor[linha][coluna];
